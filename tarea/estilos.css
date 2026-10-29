@@ -1,0 +1,141 @@
+:root {
+  --color-primario: #0b5cad;
+  --color-texto: #1f2933;
+  --color-suave: #52606d;
+  --color-borde: #9aa5b1;
+  --color-fondo: #f4f6f8;
+  --color-error: #b42318;
+  --color-exito: #067647;
+  --espacio: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: var(--espacio);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-texto);
+  background: var(--color-fondo);
+}
+
+.tarjeta {
+  max-width: 520px;
+  margin: 24px auto;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  font-size: 26px;
+  margin: 0 0 8px;
+}
+h2 {
+  font-size: 20px;
+  margin: 24px 0 12px;
+}
+.ayuda {
+  color: var(--color-suave);
+  margin-bottom: 20px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 16px;
+}
+legend {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+label {
+  display: block;
+  font-weight: bold;
+  margin: 12px 0 4px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+}
+
+.acciones {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+button {
+  min-height: 44px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.boton-principal {
+  flex: 1;
+  background: var(--color-primario);
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+}
+
+.boton-secundario {
+  background: transparent;
+  color: var(--color-suave);
+  border: 1px solid var(--color-borde);
+}
+
+.boton-eliminar {
+  background: var(--color-error);
+  color: #fff;
+  border: none;
+  padding: 4px 12px;
+  min-height: 36px;
+}
+
+:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+.mensaje {
+  min-height: 24px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+.mensaje.error {
+  color: var(--color-error);
+}
+.mensaje.exito {
+  color: var(--color-exito);
+}
+
+.lista-notas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.lista-notas li {
+  background: var(--color-fondo);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

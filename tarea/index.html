@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis Notas - UX/UI</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <main class="tarjeta">
+      <h1>Gestor de Notas</h1>
+      <p class="ayuda">
+        Escribe y organiza tus notas diarias de forma sencilla.
+      </p>
+
+      <form id="form-nota" novalidate>
+        <fieldset>
+          <legend>1. Crear nota</legend>
+          <label for="titulo">Título de la nota</label>
+          <input
+            type="text"
+            id="titulo"
+            required
+            placeholder="Ej. Compras del súper"
+          />
+
+          <label for="categoria">Categoría</label>
+          <select id="categoria" required>
+            <option value="">Selecciona categoría</option>
+            <option value="Personal">Personal</option>
+            <option value="Trabajo">Trabajo</option>
+            <option value="Estudios">Estudios</option>
+          </select>
+
+          <label for="contenido">Contenido</label>
+          <textarea
+            id="contenido"
+            rows="3"
+            required
+            placeholder="Escribe el detalle..."
+          ></textarea>
+        </fieldset>
+
+        <p id="mensaje" class="mensaje" role="status"></p>
+
+        <div class="acciones">
+          <button type="submit" class="boton-principal">Guardar nota</button>
+          <button type="reset" class="boton-secundario">Limpiar</button>
+        </div>
+      </form>
+
+      <section class="seccion-notas">
+        <h2>2. Mis notas guardadas</h2>
+        <ul id="lista-notas" class="lista-notas"></ul>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
